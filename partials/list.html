@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+    <div class="col-md-8">
+        <h1>Products list</h1>
+    </div>
+    <div class="col-md-4">
+        <a href="#/product/create" class="btn btn-primary">Add new product</a>
+    </div>
+    </div>
+    <hr/>
+    <div class="col-md-3">
+        <h5>Product categories</h5>
+	    <div class="list-group" ng-repeat="category in categories">
+	        <label>
+	            <input type="checkbox" value="{{category.id}}" />
+	            {{category.name}}
+	        </label>
+        </div>
+        <select>
+        	<option ng-repeat="distributor in distributors" value="{{distributor.id}}" ng-click="select()">{{distributor.name}}</option>
+        </select>
+    </div>
+    <div class="col-md-9">
+        <h3>Products</h3>
+        <div class="list-group">
+            <ul>
+            <li class="list-group-item" ng-repeat="product in products | orderBy: 'id'">
+	            <a ng-href="#/product/{{product.id}}">{{product.name}}</a>
+                <a class="btn btn-danger" ng-href="#/product/update/{{product.id}}">Update</a>
+	        <!-- <a class="btn btn-success btn-block" ng-show="dataAvailable" ng-click="loadPolls()">Load more polls</a> -->
+            </li>
+            </ul>
+	        <div class="alert alert-danger" ng-hide="dataAvailable">
+		        <p>
+			        No more data to load :(
+		        </p>
+	        </div> 
+        </div>
+    </div>
+</div>

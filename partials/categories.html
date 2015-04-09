@@ -1,0 +1,10 @@
+<h1>Categories</h1>
+<div class="list-group">
+	<a class="list-group-item" ng-repeat="category in categories" ng-href="#/category/{{category.id}}">{{category.name}}</a>
+	<!-- <a class="btn btn-success btn-block" ng-show="dataAvailable" ng-click="loadPolls()">Load more polls</a> -->
+	<div class="alert alert-danger" ng-hide="dataAvailable">
+		<p>
+			No more data to load :(
+		</p>
+	</div> 
+</div>

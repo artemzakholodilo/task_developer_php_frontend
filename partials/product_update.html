@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="col-md-10">
+    <form ng-submit="update()">
+        <label>Name
+            <input type="text" ng-model="product.name" />
+        </label>
+        <label>Price
+            <input type="text" ng-model="product.price" />
+        </label>
+        <div ng-repeat="category in categories">
+            <span>{{category.name}}</span>
+        </div>
+        <div class="text-center">
+            <a class="btn btn-danger" ng-href="#/"><span class="glyphicon glyphicon-arrow-left"> Back</span></a>
+            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-save"> Update</span></button>
+        </div>
+    </form>
+</div>

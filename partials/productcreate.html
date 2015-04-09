@@ -1,0 +1,15 @@
+<div class="container">
+     <h3>Create new product</h3>
+     <form ng-submit="save()">
+        <label>Name
+            <input type="text" name="name" ng-model="product.name" />
+        </label>
+        <label>Price
+            <input type="text" name="price" ng-model="product.price"  />
+        </label
+        <div class="text-center">
+            <a class="btn btn-danger" ng-href="#/"><span class="glyphicon glyphicon-arrow-left"> Back</span></a>
+            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-save"> Save</span></button>
+        </div>
+    </form>
+</div>
